@@ -12,9 +12,18 @@ templatetext = '''<!doctype html>
   <body>
 
   <div class='row'>
+    <div class='columns'>
     %s
+    </div>
   </div>
-
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
+  <script>
+      $(document).foundation();
+  </script>
+  
   </body>
 </html>
 '''
