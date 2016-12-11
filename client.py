@@ -30,3 +30,14 @@ def object_info(object_id):
     # api endpoint voor object info
     obj = 'https://www.rijksmuseum.nl/api/nl/collection/%s?key=%s&format=json' % (object_id, apikey)
 
+    r = requests.get(obj)
+    if r.status_code == 200:
+        object = r.json()['artObject']
+        titel = object['title']
+        maker = object['principalMakers'][0]['name']
+        collectie = object['objectCollection'][0]
+        # datering hier
+        kleuren = object['colors']      # list object, mogelijk leeg
+        omschrijving = object['description']
+    else:
+        print('Er is een fout opgetreden')
