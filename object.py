@@ -1,4 +1,7 @@
-<html>
+#!/usr/bin/env python3
+
+templatetext = '''<!doctype html>
+<html class="no-js" lang="en">
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/foundation.min.css" />
         <style>
@@ -49,3 +52,4 @@
         </script>
     </body>
 </html>
+'''
