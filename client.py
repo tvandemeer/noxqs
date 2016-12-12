@@ -13,7 +13,7 @@ aantal = 20     # Aantal resultaten per pagina
 
 def request_stukken():
 
-# api endpoint voor topstukken uit collectie schilderijen
+    # api endpoint voor topstukken uit collectie schilderijen
     col = 'https://www.rijksmuseum.nl/api/nl/collection?key=%s&format=%s&type=%s&imgonly=%s&toppieces=%s&ps=%d' % (
         apikey, resptype, soort, afbeelding, topstukken, aantal)
 
@@ -34,17 +34,5 @@ def object_info(object_id):
     if r.status_code == 200:
         stuk = r.json()['artObject']
         return stuk
-
-        titel = stuk['title']
-        maker = stuk['principalMakers'][0]['name']
-        collectie = stuk['objectCollection'][0]
-        # datering hier
-        if stuk['dating']['yearEarly'] != stuk['dating']['yearLate']:
-            pass
-        else:
-            pass
-        kleuren = stuk['colors']      # list object, mogelijk leeg
-        omschrijving = stuk['description']
-
     else:
         print('Er is een fout opgetreden')
