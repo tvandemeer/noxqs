@@ -32,12 +32,19 @@ def object_info(object_id):
 
     r = requests.get(obj)
     if r.status_code == 200:
-        object = r.json()['artObject']
-        titel = object['title']
-        maker = object['principalMakers'][0]['name']
-        collectie = object['objectCollection'][0]
+        stuk = r.json()['artObject']
+        return stuk
+
+        titel = stuk['title']
+        maker = stuk['principalMakers'][0]['name']
+        collectie = stuk['objectCollection'][0]
         # datering hier
-        kleuren = object['colors']      # list object, mogelijk leeg
-        omschrijving = object['description']
+        if stuk['dating']['yearEarly'] != stuk['dating']['yearLate']:
+            pass
+        else:
+            pass
+        kleuren = stuk['colors']      # list object, mogelijk leeg
+        omschrijving = stuk['description']
+
     else:
         print('Er is een fout opgetreden')
