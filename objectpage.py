@@ -17,7 +17,7 @@ def maak_objectpage():
         datering = artobject['dating']['year']
     kleuren = artobject['colors']      # list object, mogelijk leeg
     omschrijving = artobject['description']
-    return (titel, afbeelding, titel, maker, collectie)
+    return (titel, afbeelding, titel, maker, collectie, datering, omschrijving)
 
 
 objectpage = maak_objectpage()

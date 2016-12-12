@@ -29,9 +29,9 @@ templatetext = '''<!doctype html>
                 <div class="callout float-right" style="background-color:rgba(255,255,255,0.6);border-radius:6px">
                     <h4>Details</h4>
                     <h6><strong>Collectie: </strong>%s</h6>
-                    <h6><strong>Datering: van / tot</strong></h6>
+                    <h6><strong>Datering: </strong>%s</h6>
                     <div style="padding:20px 0 20px 0">
-                        <h6><strong>Primaire kleuren:</strong></h6>
+                        <h6><strong>Primaire kleuren</strong></h6>
                         <span class="label" style="background:#ff6600"></span>
                         <span class="label"></span>
                         <span class="label"></span>
@@ -41,7 +41,7 @@ templatetext = '''<!doctype html>
                         <span class="label"></span>
                     </div>
                     <h6><strong>Omschrijving</strong></h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium fermentum dolor quis semper. Sed vel porttitor leo, a faucibus sapien. Ut ut lobortis turpis. Quisque ac ex malesuada, pellentesque purus nec, pellentesque felis. Suspendisse potenti. Nunc posuere lacus eget massa efficitur rutrum. Aliquam sed vehicula nisl. Quisque ut diam ullamcorper, sagittis dolor sit amet, molestie metus. Aenean viverra massa eu purus varius, et lacinia ipsum cursus. Nam vestibulum mi a suscipit tincidunt. Etiam eu aliquet magna. Integer vitae ullamcorper purus, non aliquet felis. Mauris laoreet ultricies dapibus. Praesent vehicula eros ligula, ac tincidunt neque sollicitudin vel. Ut bibendum velit.</p>
+                    <p>%s</p>
                 </div>
             </div>
         </div>
