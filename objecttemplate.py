@@ -32,13 +32,7 @@ templatetext = '''<!doctype html>
                     <h6><strong>Datering: </strong>%s</h6>
                     <div style="padding:20px 0 20px 0">
                         <h6><strong>Primaire kleuren</strong></h6>
-                        <span class="label" style="background:#ff6600"></span>
-                        <span class="label"></span>
-                        <span class="label"></span>
-                        <span class="label"></span>
-                        <span class="label"></span>
-                        <span class="label"></span>
-                        <span class="label"></span>
+                        %s
                     </div>
                     <h6><strong>Omschrijving</strong></h6>
                     <p>%s</p>

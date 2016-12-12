@@ -4,7 +4,7 @@ from client import object_info
 from objecttemplate import templatetext
 import sys
 
-artobject = object_info(sys.argv[1])
+artobject = object_info(sys.argv[1])    # Eerste command line argument is object id
 
 def maak_objectpage():
     afbeelding = artobject['webImage']['url']
@@ -16,8 +16,14 @@ def maak_objectpage():
     else:
         datering = artobject['dating']['year']
     kleuren = artobject['colors']      # list object, mogelijk leeg
+    if kleuren:
+        kleurenlijst = ''
+        for kleur in kleuren:
+            kleurenlijst += '<span class="label" style="background:%s"></span>' % (kleur,)
+    else:
+        kleurenlijst = 'Geen informatie'
     omschrijving = artobject['description']
-    return (titel, afbeelding, titel, maker, collectie, datering, omschrijving)
+    return (titel, afbeelding, titel, maker, collectie, datering, kleurenlijst, omschrijving)
 
 
 objectpage = maak_objectpage()
