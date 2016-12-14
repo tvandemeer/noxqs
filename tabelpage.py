@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from client import request_stukken
-from htmltemplate import templatetext
+from tabeltemplate import templatetext
 
 stukken = request_stukken()
 
@@ -27,7 +27,7 @@ def maak_tabel():
         for stuk in stukken:
             print(stuk['id'])    #dev
             tablerow = row % (stuk['title'], stuk['links']['web'])
-                           
+
             htmltabel += tablerow
 
         htmltabel += '</tbody></table>'
@@ -42,7 +42,7 @@ if tabel:
     paginabron = templatetext % (tabel,)
 
 if paginabron:
-    f = open('index.html', 'w')
+    f = open('tabel.html', 'w')
     f.write(paginabron)
     f.close()
 
