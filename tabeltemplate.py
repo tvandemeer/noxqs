@@ -12,6 +12,15 @@ templatetext = '''<!doctype html>
   <body>
 
   <div class='row'>
+    <div class='callout secondary'>
+        <ul>
+            <li>Aantal objecten: %d</li>
+            <li>Responsetijd: %d ms</li>
+        </ul>
+    </div>
+  </div>
+
+  <div class='row'>
     <div class='columns'>
     %s
     </div>

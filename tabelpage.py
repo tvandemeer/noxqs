@@ -6,6 +6,8 @@ from tabeltemplate import templatetext
 stukken = request_stukken()
 
 paginabron = ''
+aantal = stukken['count']
+responsetijd = stukken['elapsedMilliseconds']
 
 
 def maak_tabel():
@@ -24,7 +26,7 @@ def maak_tabel():
           '''
 
     if stukken:
-        for stuk in stukken:
+        for stuk in stukken['artObjects']:
             print(stuk['id'])    #dev
             tablerow = row % (stuk['title'], stuk['links']['web'])
 
@@ -39,7 +41,7 @@ def maak_tabel():
 tabel = maak_tabel()
 
 if tabel:
-    paginabron = templatetext % (tabel,)
+    paginabron = templatetext % (aantal, responsetijd, tabel)
 
 if paginabron:
     f = open('tabel.html', 'w')
