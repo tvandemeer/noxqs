@@ -9,7 +9,7 @@ soort = 'schilderij'
 afbeelding = 'True'     # Alleen resultaten met afbeelding
 topstukken = 'True'
 perpagina = 20     # Aantal resultaten per pagina
-pagina = 36      # Index van pagina met resultaten
+pagina = 13      # Index van pagina met resultaten
 
 
 def request_stukken():
@@ -29,7 +29,7 @@ def request_stukken():
 def object_info(object_id):
 
     # api endpoint voor object info
-    obj = 'https://www.rijksmuseum.nl/api/nl/collection/%s?key=%s&format=json' % (object_id, apikey)
+    obj = 'https://www.rijksmuseum.nl/api/nl/collection/%s?key=%s&format=%s' % (object_id, apikey, resptype)
 
     r = requests.get(obj)
     if r.status_code == 200:
