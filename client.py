@@ -9,7 +9,7 @@ soort = 'schilderij'
 afbeelding = 'True'     # Alleen resultaten met afbeelding
 topstukken = 'True'
 perpagina = 20     # Aantal resultaten per pagina
-pagina = 1      # Index van pagina met resultaten
+pagina = 36      # Index van pagina met resultaten
 
 
 def request_stukken():

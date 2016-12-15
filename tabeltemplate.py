@@ -16,8 +16,7 @@ templatetext = '''<!doctype html>
         <ul>
             <li>Aantal objecten: %d</li>
             <li>Per pagina: %d</li>
-            <li>Pagina: %d</li>
-            <li>Responsetijd: %d ms</li>
+            <li>Pagina: %d / %d</li>
         </ul>
     </div>
   </div>
