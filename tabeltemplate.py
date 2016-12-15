@@ -15,6 +15,8 @@ templatetext = '''<!doctype html>
     <div class='callout secondary'>
         <ul>
             <li>Aantal objecten: %d</li>
+            <li>Per pagina: %d</li>
+            <li>Pagina: %d</li>
             <li>Responsetijd: %d ms</li>
         </ul>
     </div>

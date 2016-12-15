@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from client import request_stukken
+from client import request_stukken, perpagina, pagina
 from tabeltemplate import templatetext
 
 stukken = request_stukken()
@@ -45,7 +45,7 @@ def maak_tabel():
 tabel = maak_tabel()
 
 if tabel:
-    paginabron = templatetext % (aantal, responsetijd, tabel)
+    paginabron = templatetext % (aantal, perpagina, pagina, responsetijd, tabel)
 
 if paginabron:
     f = open('tabel.html', 'w')
