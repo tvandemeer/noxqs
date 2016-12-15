@@ -17,13 +17,13 @@ templatetext = '''<!doctype html>
     </style>
     </head>
     <body>
-    
+
         <div class="row">
             <div class="columns large-6 small-6">
-                <button id="titelbutton" class="button secondary" type="button" style="opacity:0.5;border-radius:0 0 4px 4px">Titel &#8693;</button>
+                <button id="titelbutton" class="button secondary" type="button" style="opacity:0.5;border-radius:0 0 4px 4px"><strong>Titel &#8693;</strong></button>
             </div>
             <div class="columns large-6 small-6">
-                <button id="detailsbutton" class="button secondary float-right" type="button" style="opacity:0.5;border-radius:0 0 4px 4px">Details &#8693;</button>
+                <button id="detailsbutton" class="button secondary float-right" type="button" style="opacity:0.5;border-radius:0 0 4px 4px"><strong>Details &#8693;</strong></button>
             </div>
         </div>
 
@@ -52,11 +52,11 @@ templatetext = '''<!doctype html>
         <script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
         <script>
             $(document).foundation();
-            
+
             $( "#titelbutton" ).click(function() {
                 $( "#titelcallout" ).slideToggle( "slow" );
             });
-            
+
             $( "#detailsbutton" ).click(function() {
                 $( "#detailscallout" ).slideToggle( "slow" );
             });
