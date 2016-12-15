@@ -16,6 +16,7 @@ def maak_tabel():
                             <tr>
                                 <th>Titel</th>
                                 <th>Maker</th>
+                                <th>Objectnummer</th>
                                 <th>Link Extern</th>
                             </tr>
                         </thead>
@@ -24,13 +25,14 @@ def maak_tabel():
 
     row = '''<tr><td>%s</td>
             <td>%s</td>
+            <td>%s</td>
             <td><a href="%s">Info</a></td></tr>
           '''
 
     if stukken:
         for stuk in stukken['artObjects']:
             print(stuk['id'])    #dev
-            tablerow = row % (stuk['title'], stuk['principalOrFirstMaker'], stuk['links']['web'])
+            tablerow = row % (stuk['title'], stuk['principalOrFirstMaker'], stuk['objectNumber'], stuk['links']['web'])
 
             htmltabel += tablerow
 
