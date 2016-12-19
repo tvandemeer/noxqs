@@ -4,6 +4,15 @@ from client import request_stukken, perpagina, pagina
 from tabeltemplate import templatetext
 from math import ceil
 
+''' # Voor uitgebreidere ondersteuning cli argumenten
+import argparse
+from urllib.parse import urlparse, parse_qs
+
+parser = argparse.ArgumentParser()
+# add arguments
+args = parser.parse_args()
+'''
+
 stukken = request_stukken()
 
 paginabron = ''

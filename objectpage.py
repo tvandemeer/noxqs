@@ -4,6 +4,12 @@ from client import object_info
 from objecttemplate import templatetext
 import sys
 
+import argparse
+from urllib.parse import urlparse, parse_qs
+
+parser = argparse.ArgumentParser()
+# add arguments
+args = parser.parse_args()
 artobject = object_info(sys.argv[1])    # Eerste command line argument is object id
 
 def maak_objectpage():
