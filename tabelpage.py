@@ -4,14 +4,19 @@ from client import request_stukken, perpagina, pagina
 from tabeltemplate import templatetext
 from math import ceil
 
-''' # Voor uitgebreidere ondersteuning cli argumenten
+# Voor uitgebreidere ondersteuning cli argumenten
 import argparse
 from urllib.parse import urlparse, parse_qs
 
 parser = argparse.ArgumentParser()
-# add arguments
+parser.add_argument('-k', '--key', help='api key')
+parser.add_argument('-f', '--format', help='response type (xml/json/jsonp)')
+parser.add_argument('-t', '--type', help='object type')
+parser.add_argument('-i', '--image', help='afbeelding beschikbaar (True/False)')
+parser.add_argument('-p', '--piecestop', help='topstukken (True/False)')
+parser.add_argument('-b', '--bladzijde', help='index van pagina met resultaten')
+parser.add_argument('-a', '--aantal', help='aantal resultaten per pagina')
 args = parser.parse_args()
-'''
 
 stukken = request_stukken()
 
