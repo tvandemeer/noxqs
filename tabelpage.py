@@ -9,16 +9,23 @@ import argparse
 from urllib.parse import urlparse, parse_qs
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-k', '--key', help='api key')
-parser.add_argument('-f', '--format', help='response type (xml/json/jsonp)')
-parser.add_argument('-t', '--type', help='object type')
-parser.add_argument('-i', '--image', help='afbeelding beschikbaar (True/False)')
-parser.add_argument('-p', '--piecestop', help='topstukken (True/False)')
-parser.add_argument('-b', '--bladzijde', help='index van pagina met resultaten')
-parser.add_argument('-a', '--aantal', help='aantal resultaten per pagina')
+parser.add_argument('-u', '--url', help='url van een api endpoint (plaats de url tussen aanhalingstekens!)')
+#parser.add_argument('-k', '--key', help='api key')
+#parser.add_argument('-f', '--format', help='response type (xml/json/jsonp)')
+#parser.add_argument('-t', '--type', help='object type')
+#parser.add_argument('-i', '--image', help='afbeelding beschikbaar (True/False)')
+#parser.add_argument('-p', '--piecestop', help='topstukken (True/False)')
+#parser.add_argument('-b', '--bladzijde', help='index van pagina met resultaten')
+#parser.add_argument('-a', '--aantal', help='aantal resultaten per pagina')
 args = parser.parse_args()
 
-stukken = request_stukken()
+query = {}
+
+if args.url:
+    query = parse_qs(urlparse(args.url).query)
+    print(query)
+
+stukken = request_stukken(query)
 
 paginabron = ''
 aantal = stukken['count']
