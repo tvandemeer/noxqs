@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
-from client import request_stukken, perpagina, pagina
+import pdb # python debugger
+
+from client import request_stukken, pagina
 from tabeltemplate import templatetext
 from math import ceil
 
@@ -19,17 +21,19 @@ parser.add_argument('-u', '--url', help='url van een api endpoint (plaats de url
 #parser.add_argument('-a', '--aantal', help='aantal resultaten per pagina')
 args = parser.parse_args()
 
+pdb.set_trace()
+
 query = {}
+perpagina = 20
 
 if args.url:
     query = parse_qs(urlparse(args.url).query)
-    print(query)
 
-stukken = request_stukken(query)
+stukken = request_stukken(query, perpagina)
 
 paginabron = ''
 aantal = stukken['count']
-paginas = ceil(aantal/perpagina)
+paginas = ceil(aantal/perpagina) # WELKE WAARDE PERPAGINA???
 
 
 def maak_tabel():
@@ -66,6 +70,7 @@ def maak_tabel():
 tabel = maak_tabel()
 
 if tabel:
+    print(str(perpagina) + ' tabelpage') #DEBUG
     paginabron = templatetext % (aantal, perpagina, pagina, paginas, tabel)
 
 if paginabron:

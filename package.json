@@ -1,0 +1,22 @@
+{
+  "name": "noxqs",
+  "version": "1.0.0",
+  "description": "Dependencies ============",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tvandemeer/noxqs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tvandemeer/noxqs/issues"
+  },
+  "homepage": "https://github.com/tvandemeer/noxqs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
